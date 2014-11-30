@@ -1,0 +1,55 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: pvgame
+-- ------------------------------------------------------
+-- Server version	5.0.76-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `medals`
+--
+
+DROP TABLE IF EXISTS `medals`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `medals` (
+  `id` smallint(5) unsigned NOT NULL,
+  `type` tinyint(3) unsigned NOT NULL,
+  `subtype` smallint(5) unsigned NOT NULL default '0',
+  `amount` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `type` (`type`,`subtype`),
+  KEY `id` (`id`)
+) ENGINE=MEMORY DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `medals`
+--
+
+LOCK TABLES `medals` WRITE;
+/*!40000 ALTER TABLE `medals` DISABLE KEYS */;
+INSERT INTO `medals` VALUES (1,2,0,5),(12,2,3,1),(13,2,0,25),(14,2,0,50),(15,2,0,100),(2,1,3009,1),(3,1,1006,1),(20,3,10,1),(21,3,0,3),(22,3,0,7),(23,3,2,1),(24,3,7,1),(25,3,3,1),(26,3,0,50),(27,3,0,100),(40,4,1,2),(41,4,1,5),(42,4,1,50),(43,4,1,100),(44,4,1,200),(50,4,2,1),(51,4,2,5),(16,2,0,200),(52,4,2,50),(53,4,2,100),(60,4,3,1),(61,4,3,5),(17,2,0,500),(18,2,0,1000),(28,3,0,200),(29,3,0,500),(30,3,0,1000),(45,4,1,500),(46,4,1,1000),(54,4,2,200),(55,4,2,500),(56,4,2,1000),(62,4,3,50),(63,4,3,100),(64,4,3,200),(65,4,3,500),(66,4,3,1000),(70,6,3011,1),(71,6,3011,50),(72,6,3009,1),(73,6,3009,50),(74,6,3001,1),(75,6,3001,50),(76,6,3007,1),(77,6,3007,50),(78,6,3014,1),(79,6,3014,50),(80,6,3008,1),(81,6,3008,50),(82,6,3002,1),(83,6,3002,50),(84,6,3016,1),(85,6,3016,50),(86,6,3022,1),(87,6,3022,50),(88,6,3021,1),(89,6,3021,50),(90,6,2,1),(91,6,2,50),(100,7,0,1),(101,7,0,5),(102,7,0,10),(103,7,0,20),(104,7,0,50),(105,7,0,100),(110,8,0,1),(112,8,0,50),(113,8,0,150),(114,8,0,250),(115,8,0,500),(116,8,0,1000),(111,8,0,10);
+/*!40000 ALTER TABLE `medals` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-07-14  4:39:38

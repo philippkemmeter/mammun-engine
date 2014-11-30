@@ -1,0 +1,9 @@
+<?php
+//error_reporting(E_ALL);
+define ('CONF_PAYMENT_SERVER_MAIN_URL',	'http://localhost:8001/game');
+define ('CONF_WCF_SERVER_URL', 'http://localhost/mammun_community');
+define ('CONF_UNIT_TEST_MODE',  true);
+
+//define ('CONF_DB_READ_ONLY', true);
+//define ('CONF_ENGINE_SERVER_MAIN_URL',	'http://195.13.61.59:8126/game');
+?>

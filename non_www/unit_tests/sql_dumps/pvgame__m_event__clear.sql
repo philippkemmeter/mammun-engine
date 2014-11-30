@@ -1,0 +1,3 @@
+LOCK TABLES m_event WRITE;
+DELETE FROM m_event;
+UNLOCK TABLES;
